@@ -108,13 +108,16 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="编程五分钟 debug两小时">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Starduster">
 <meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
 <meta property="og:site_name" content="Starduster">
+<meta property="og:description" content="编程五分钟 debug两小时">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Starduster">
+<meta name="twitter:description" content="编程五分钟 debug两小时">
 
 
 
@@ -324,7 +327,7 @@
         
           
         
-        嗯..! 目前共计 2 篇日志。 继续努力。
+        嗯..! 目前共计 1 篇日志。 继续努力。
       </span>
       
 
@@ -360,43 +363,6 @@
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
               datetime="2018-07-29T16:18:48+08:00"
-              content="2018-07-29" >
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-07-29/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-29T14:59:09+08:00"
               content="2018-07-29" >
           07-29
         </time>
@@ -451,7 +417,7 @@
                 alt="JUMP" />
             
               <p class="site-author-name" itemprop="name">JUMP</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">编程五分钟 debug两小时</p>
           </div>
 
           
@@ -461,7 +427,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -584,10 +550,25 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共414字</span>
+  <span class="post-count">博客全站共345字</span>
 </div>
 
-
+<span id="show"><span>
+<script>
+window.onload = function() { 
+var show = document.getElementById("show"); 
+setInterval(function() { 
+var time = new Date(); 
+// 程序计时的月从0开始取值后+1 
+var m = time.getMonth() + 1; 
+//根据自己博客的创建时间更改数值 
+var t = "提示内容"+(time.getFullYear()-2018) + "年" + (m-7) + "月" 
++ time.getDate() + "天 " + time.getHours() + "时" 
++ time.getMinutes() + "分" + time.getSeconds() + "秒"; 
+show.innerHTML = t; 
+}, 1000); 
+};
+</script>
 
 
 

@@ -108,13 +108,16 @@
 
 
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="编程五分钟 debug两小时">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Starduster">
 <meta property="og:url" content="http://yoursite.com/categories/笔-记/index.html">
 <meta property="og:site_name" content="Starduster">
+<meta property="og:description" content="编程五分钟 debug两小时">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Starduster">
+<meta name="twitter:description" content="编程五分钟 debug两小时">
 
 
 
@@ -393,7 +396,7 @@
                 alt="JUMP" />
             
               <p class="site-author-name" itemprop="name">JUMP</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">编程五分钟 debug两小时</p>
           </div>
 
           
@@ -403,7 +406,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -526,10 +529,25 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共414字</span>
+  <span class="post-count">博客全站共345字</span>
 </div>
 
-
+<span id="show"><span>
+<script>
+window.onload = function() { 
+var show = document.getElementById("show"); 
+setInterval(function() { 
+var time = new Date(); 
+// 程序计时的月从0开始取值后+1 
+var m = time.getMonth() + 1; 
+//根据自己博客的创建时间更改数值 
+var t = "提示内容"+(time.getFullYear()-2018) + "年" + (m-7) + "月" 
++ time.getDate() + "天 " + time.getHours() + "时" 
++ time.getMinutes() + "分" + time.getSeconds() + "秒"; 
+show.innerHTML = t; 
+}, 1000); 
+};
+</script>
 
 
 
