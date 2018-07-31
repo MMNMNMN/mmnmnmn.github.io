@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首 页</a>
   </li>
         
         
@@ -247,7 +247,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标 签</a>
   </li>
         
         
@@ -255,7 +255,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分 类</a>
   </li>
         
         
@@ -263,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归 档</a>
   </li>
         
         
@@ -271,7 +271,15 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关 于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-comments">
+    <a href="/comments" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />吐 槽</a>
   </li>
 
       
@@ -409,30 +417,9 @@
 
            
           
-             <span id="/2018-07-29/Hello/" class="leancloud_visitors" data-flag-title="Hello and Welcome!">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">浏览量：</span>
-               
-                 <span class="leancloud-visitors-count">次</span>
-             </span>
-          
 
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018-07-29/Hello/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018-07-29/Hello/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -479,6 +466,7 @@
       
       <div>
     
+    	<br>
         <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
     
 </div>
@@ -539,9 +527,6 @@
           
 
   
-    <div class="comments" id="comments">
-    </div>
-  
 
 
 
@@ -584,7 +569,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -601,7 +586,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -620,7 +607,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -632,6 +629,11 @@
 
           
             <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/JUMPutf-8" target="_blank" title="Gitee"><i class="fa fa-fw fa-desktop"></i>Gitee</a>
+                  
+                </span>
               
                 <span class="links-of-author-item">
                   <a href="mailto:jhhongcheng@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -715,7 +717,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.5k字</span>
+  <span class="post-count">博客全站共3.4k字</span>
 </div>
 <span class="post-meta-divider">|</span>
 
@@ -723,21 +725,33 @@
 
 
 
-<span id="show"><span>
+<span id="sitetime"><span>
 <script>
-window.onload = function() { 
-var show = document.getElementById("show"); 
-setInterval(function() { 
-var time = new Date(); 
-// 程序计时的月从0开始取值后+1 
-var m = time.getMonth() + 1; 
-//根据自己博客的创建时间更改数值 
-var t = "Starduster 已运行"+(time.getFullYear()-2018) + "年" + (m-7) + "月" 
-+ time.getDate() + "天 " + time.getHours() + "时" 
-+ time.getMinutes() + "分" + time.getSeconds() + "秒"; 
-show.innerHTML = t; 
-}, 1000); 
-};
+function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2018,7,29,16,18,48); //北京时间2016-12-1 00:00:00
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor(diff/days);
+        var diffHours = Math.floor((diff-(diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById("sitetime").innerHTML=" Starduster 萌萌哒地运行了 " + diffDays + " 天 " + diffHours + " 小时 "
+        + diffMinutes+" 分钟 " + diffSeconds + " 秒";
+    }
+    siteTime();
 </script>
 
 
@@ -857,31 +871,6 @@ show.innerHTML = t;
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'OD7aqLTb6Oh5bKM2tCxws1ox-gzGzoHsz',
-        appKey: 'Kfo24C8wdUnoS1IYmFhSDxFn',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        avatar:'mm',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: true
-    });
-  </script>
 
 
 

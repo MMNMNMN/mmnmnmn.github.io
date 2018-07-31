@@ -133,7 +133,7 @@
 <meta property="og:site_name" content="Starduster">
 <meta property="og:description" content="Windows安装环境：Windows 7去官网下载安装包。安装时有个坑：不要勾选MongoDB Compass，不然安装时会卡死。第一次装的时候就卡在了这里，刚开始以为是需要梯子，但是翻墙了之后依然没有好转。百度了下发现是普遍问题，可能是下载源有问题。Compass是MongoDB的图形界面工具，可另外下载。 第一种启动方法：安装好后在任意位置下创建data文件夹，并在其中创建db文件夹用于存储">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-30T16:10:22.506Z">
+<meta property="og:updated_time" content="2018-07-31T14:46:37.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB的安装">
 <meta name="twitter:description" content="Windows安装环境：Windows 7去官网下载安装包。安装时有个坑：不要勾选MongoDB Compass，不然安装时会卡死。第一次装的时候就卡在了这里，刚开始以为是需要梯子，但是翻墙了之后依然没有好转。百度了下发现是普遍问题，可能是下载源有问题。Compass是MongoDB的图形界面工具，可另外下载。 第一种启动方法：安装好后在任意位置下创建data文件夹，并在其中创建db文件夹用于存储">
@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首 页</a>
   </li>
         
         
@@ -247,7 +247,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标 签</a>
   </li>
         
         
@@ -255,7 +255,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分 类</a>
   </li>
         
         
@@ -263,7 +263,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归 档</a>
   </li>
         
         
@@ -271,7 +271,15 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关 于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-comments">
+    <a href="/comments" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-comments"></i> <br />吐 槽</a>
   </li>
 
       
@@ -381,7 +389,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-31 00:10:22" itemprop="dateModified" datetime="2018-07-31T00:10:22+08:00">2018-07-31</time>
+                <time title="修改时间：2018-07-31 22:46:37" itemprop="dateModified" datetime="2018-07-31T22:46:37+08:00">2018-07-31</time>
               
             
           </span>
@@ -409,30 +417,9 @@
 
            
           
-             <span id="/2018-07-30/mongo-install/" class="leancloud_visitors" data-flag-title="MongoDB的安装">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">浏览量：</span>
-               
-                 <span class="leancloud-visitors-count">次</span>
-             </span>
-          
 
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018-07-30/mongo-install/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018-07-30/mongo-install/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -470,9 +457,15 @@
 <p>回车后并没有和之前一样输出一大堆日志，我以为失败了。在浏览器中输入：localhost:27017(这里的端口号要以mongo.cfg中设置的为准)，有结果，说明服务器已启动。然后我打开了之前创建的mongo.log文件，原来日志已经存在了里面，<br>所以窗口内才不显示日志。</p>
 <p>以上两种方法都比较麻烦，每次使用都需要先启动，手动输入参数。还有一种更简单的，终极懒人方法，将MongoDB作为服务。运行mongod.exe<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod.exe --config <span class="string">"d:\mongodb\mongo.cfg"</span> --install --serviceName <span class="string">"MongoDB"</span></span><br></pre></td></tr></table></figure></p>
 <p>win + R 输入net start MongoDB启动服务，设置系统环境变量，将mongo.exe所在路径加到path中。这样每次打开电脑，MongoDB服务器自动启动，如果要打开shell，直接在命令行中输入mongo即可。<br>停止服务：net stop MongoDB<br>卸载服务：在bin目录下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod.exe --remove --serviceName <span class="string">"MongoDB"</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<hr>
+<p><br></p>
 <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h5 id="安装环境：CentOS-7"><a href="#安装环境：CentOS-7" class="headerlink" title="安装环境：CentOS 7"></a>安装环境：CentOS 7</h5><p>百度了下，可以通过配置yum源的方式下载，还可以用wget的方式下载，但是这两种方法我都试了，没有效果。我对Linux不熟，暂不探求问题原因。既然前两种方法都不行，就用简单粗暴点的方法。<br>在MongoDB官网下载Linux下的压缩包，并上传至CentOS。我选择将MongoDB存放在root目录下。在root下创建文件夹mongodb，其中创建db目录和logs目录，创建mongo.cfg配置文件，这些都与Windows一样。在mongodb目录下解压上传的包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxyf xxxx.tar</span><br></pre></td></tr></table></figure></p>
 <p>进入bin目录，启动mongodb：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./mongod -config /root/mongodb/mongo.cfg</span><br></pre></td></tr></table></figure></p>
 <p>同目录下打开mongo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./mongo</span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<hr>
+<p><br></p>
 <h1 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h1><p>MacOS的话和前两种差不多，可自行对比。<del>才不是因为我没有Mac所以没有给过程</del></p>
 
       
@@ -489,6 +482,7 @@
       
       <div>
     
+    	<br>
         <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
     
 </div>
@@ -528,6 +522,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018-07-31/one-line-python/" rel="prev" title="'one_line_python'">
+                'one_line_python' <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -548,9 +546,6 @@
           </div>
           
 
-  
-    <div class="comments" id="comments">
-    </div>
   
 
 
@@ -603,7 +598,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -620,7 +615,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -639,7 +636,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -651,6 +658,11 @@
 
           
             <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/JUMPutf-8" target="_blank" title="Gitee"><i class="fa fa-fw fa-desktop"></i>Gitee</a>
+                  
+                </span>
               
                 <span class="links-of-author-item">
                   <a href="mailto:jhhongcheng@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
@@ -750,7 +762,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.5k字</span>
+  <span class="post-count">博客全站共3.4k字</span>
 </div>
 <span class="post-meta-divider">|</span>
 
@@ -758,21 +770,33 @@
 
 
 
-<span id="show"><span>
+<span id="sitetime"><span>
 <script>
-window.onload = function() { 
-var show = document.getElementById("show"); 
-setInterval(function() { 
-var time = new Date(); 
-// 程序计时的月从0开始取值后+1 
-var m = time.getMonth() + 1; 
-//根据自己博客的创建时间更改数值 
-var t = "Starduster 已运行"+(time.getFullYear()-2018) + "年" + (m-7) + "月" 
-+ time.getDate() + "天 " + time.getHours() + "时" 
-+ time.getMinutes() + "分" + time.getSeconds() + "秒"; 
-show.innerHTML = t; 
-}, 1000); 
-};
+function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2018,7,29,16,18,48); //北京时间2016-12-1 00:00:00
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffDays = Math.floor(diff/days);
+        var diffHours = Math.floor((diff-(diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById("sitetime").innerHTML=" Starduster 萌萌哒地运行了 " + diffDays + " 天 " + diffHours + " 小时 "
+        + diffMinutes+" 分钟 " + diffSeconds + " 秒";
+    }
+    siteTime();
 </script>
 
 
@@ -892,31 +916,6 @@ show.innerHTML = t;
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'OD7aqLTb6Oh5bKM2tCxws1ox-gzGzoHsz',
-        appKey: 'Kfo24C8wdUnoS1IYmFhSDxFn',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        avatar:'mm',
-        meta:guest,
-        pageSize:'10' || 10,
-        visitor: true
-    });
-  </script>
 
 
 
