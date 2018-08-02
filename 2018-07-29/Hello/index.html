@@ -417,9 +417,30 @@
 
            
           
+             <span id="/2018-07-29/Hello/" class="leancloud_visitors" data-flag-title="Hello and Welcome!">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">浏览量：</span>
+               
+                 <span class="leancloud-visitors-count">次</span>
+             </span>
+          
 
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018-07-29/Hello/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018-07-29/Hello/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -526,6 +547,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -717,7 +741,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.6k字</span>
+  <span class="post-count">博客全站共5.7k字</span>
 </div>
 <span class="post-meta-divider">|</span>
 
@@ -871,6 +895,31 @@ function siteTime(){
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'OD7aqLTb6Oh5bKM2tCxws1ox-gzGzoHsz',
+        appKey: 'Kfo24C8wdUnoS1IYmFhSDxFn',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
 
 
 

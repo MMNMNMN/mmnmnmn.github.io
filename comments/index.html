@@ -125,17 +125,17 @@
 
 
 
-  <meta name="description" content="编程五分钟 debug两小时">
+  <meta name="description" content="如果有任何问题、意见或是建议，欢迎留言！ 评论支持Markdown，输入框左下角有一个小按钮，可点击了解Markdown语法，或者直接度娘 昵称、邮箱和网址都不是必填项，邮箱和网址我估计都没人填，至少昵称填一下，让我知道你是谁">
 <meta property="og:type" content="website">
 <meta property="og:title" content="吐 槽">
 <meta property="og:url" content="mmnmnmn.github.io/comments/index.html">
 <meta property="og:site_name" content="Starduster">
-<meta property="og:description" content="编程五分钟 debug两小时">
+<meta property="og:description" content="如果有任何问题、意见或是建议，欢迎留言！ 评论支持Markdown，输入框左下角有一个小按钮，可点击了解Markdown语法，或者直接度娘 昵称、邮箱和网址都不是必填项，邮箱和网址我估计都没人填，至少昵称填一下，让我知道你是谁">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-31T12:38:26.000Z">
+<meta property="og:updated_time" content="2018-08-02T15:18:36.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="吐 槽">
-<meta name="twitter:description" content="编程五分钟 debug两小时">
+<meta name="twitter:description" content="如果有任何问题、意见或是建议，欢迎留言！ 评论支持Markdown，输入框左下角有一个小按钮，可点击了解Markdown语法，或者直接度娘 昵称、邮箱和网址都不是必填项，邮箱和网址我估计都没人填，至少昵称填一下，让我知道你是谁">
 
 
 
@@ -363,7 +363,12 @@
       <div class="post-body">
         
         
-          
+          <ul>
+<li>如果有任何问题、意见或是建议，欢迎留言！</li>
+<li>评论支持Markdown，输入框左下角有一个小按钮，可点击了解Markdown语法，或者直接度娘</li>
+<li>昵称、邮箱和网址都不是必填项，邮箱和网址我估计都没人填，至少昵称填一下，让我知道你是谁</li>
+</ul>
+
         
       </div>
       
@@ -383,6 +388,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -574,7 +582,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.6k字</span>
+  <span class="post-count">博客全站共5.7k字</span>
 </div>
 <span class="post-meta-divider">|</span>
 
@@ -728,6 +736,31 @@ function siteTime(){
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'OD7aqLTb6Oh5bKM2tCxws1ox-gzGzoHsz',
+        appKey: 'Kfo24C8wdUnoS1IYmFhSDxFn',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: true
+    });
+  </script>
 
 
 
